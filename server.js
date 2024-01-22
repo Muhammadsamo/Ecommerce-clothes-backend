@@ -10,8 +10,8 @@ app.use(cors());
 // app.use(express.static("public"));
 
 app.use("/api/stripe", stripe);
-
-app.listen(PORT, () => console.log(`Running on port ${PORT}`));
 app.get("/", (req, res) =>
   res.send(`<h1>Running on Linux VM on port: ${PORT} </h1>`)
 );
+
+app.listen(PORT, () => console.log(`Running on port ${PORT}`));
