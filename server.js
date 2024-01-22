@@ -11,4 +11,5 @@ app.use(cors());
 
 app.use("/api/stripe", stripe);
 
-app.listen(4242, () => console.log(`Running on port ${PORT}`));
+app.listen({PORT}, () => console.log(`Running on port ${PORT}`));
+app.get("/", (req, res) => app.res(`Running on Linux VM on port: ${PORT}`));
